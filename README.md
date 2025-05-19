@@ -1,5 +1,5 @@
 # Project
-## Contents
+## Indhold
 
 * [Introduktion til projektet](#iIntroduktion )
 * [Kode](#Kode)
