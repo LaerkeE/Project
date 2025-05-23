@@ -72,9 +72,9 @@ link til visualiserings kode
 
 #### Bivariateplot
 De bivariate plots fra MiXeR illustrerer det genetiske overlap og forskelle mellem anoreksi og andre mentale lidelser eller træk, baseret på GWAS-summary statistics. For hver bivariatanalyse genereres fire plots:
-Et Venn-diagram, som viser antallet af SNPs, der er unikke for anoreksi, unikke for det andet træk, og som er fælles mellem dem.
-To QQ-plots, der sammenligner de observerede og forventede GWAS test-statistikker for henholdsvis anoreksi og det andet træk.
-Et log-likelihood plot, som viser modellens tilpasning og robusthed.
+- Et Venn-diagram, som viser antallet af SNPs, der er unikke for anoreksi, unikke for det andet træk, og som er fælles mellem dem.
+- To QQ-plots, der sammenligner de observerede og forventede GWAS test-statistikker for henholdsvis anoreksi og det andet træk.
+- Et log-likelihood plot, som viser modellens tilpasning og robusthed.
 
 Venn-diagrammet og log-likelihood plottet laves ud fra outputfilen fra bivariate fit-analysen, mens QQ-plots laves ud fra outputfilen fra bivariate test-analysen.
 
