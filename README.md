@@ -19,40 +19,72 @@ Kort beskrivelse af projektets formål, problemstilling og hvorfor MiXer-metoden
 
 ## Projektstruktur
 
-Forklaring af mappestruktur og hvad de enkelte mapper/sektioner indeholder.
+Projektet er organiseret, så det er nemt at finde rundt i de forskellige typer filer og forstå arbejdsgangen fra data til resultater.
+
+I kode mapperne for den Univairate og Bivariate analyse er der kun vist et eksempel på, hvordan koden ser ud. Selve kommandoerne og arbejdsgangen er ens for alle analyser; det, der varierer fra analyse til analyse, er hvilke datafiler der anvendes som input. Det betyder, at du kan genbruge den samme kode til forskellige analyser ved blot at udskifte de relevante datafiler, alt efter hvilke træk eller sygdomme du ønsker at undersøge.
+
+I mappen for visualiseringer findes alle de bivariate plots, der er genereret som en del af analyserne. For at gøre README-filen overskuelig og let at følge, er kun ét eksempel på et bivariant plot inkluderet direkte her i dokumentationen. Dette gør det muligt at se et konkret plot sammen med forklaringen, mens de øvrige plots kan findes i visualiseringsmappen, hvis man ønsker at se flere resultater 
 
 ## Kode
-Her Findes en beskrivelse af alt kode der er blevet brugt i projektet.
+Her findes en beskrivelse af al kode, der er blevet brugt i projektet.
 *Måske nævne noget med at downloade summary statistic* 
-Den samme kode er blevet brugt på forskellige mentale lidelser og træk, og der ikke være alt kodefiler i mapperne da de er ens udover den data der er blevet brugt
-### Univariat analyse
-Den Univariate analyse bruges til at estimere hvor mange genetiske varianter der samlet set har indflydelse på risikoen for den mentale lidelse, samt Styrken af de genetiske bidrag. Dette gøres for én enkelt mental lidelse (Eller et andet træk) af gangen. Dette er baseret på GWAS-summary statistics.
 
-Koden er delt op i en fit kode og en test kode
+Bemærk: Koden, som er vist her i projektet, kan ikke køres direkte, da filstierne og miljøet er tilpasset et High Performance Computing (HPC) cluster. 
+### Univariat analyse
+Den univariate analyse bruges til at estimere, hvor mange SNP's der samlet set har indflydelse på risikoen for en mental lidelse, samt styrken af de genetiske bidrag. Dette gøres for én enkelt mental lidelse (eller et andet træk) ad gangen og er baseret på GWAS-summary statistics.
+
+Koden er delt op i en fit-kode og en test-kode.
 
 #### Fit kode
-Denne kode kører MiXeR’s univariate fit-analyse på et sæt GWAS-summary statistics. Koden læser først GWAS-dataene fra den angivne fil og udvælger de SNPs, der skal indgå i analysen, baseret på en separat liste. I koden bruges der referencefiler, der indeholder information om SNP-positioner og deres indbyrdes genetiske sammenhæng (linkage disequilibrium). Ud fra dette estimerer MiXeR en statistisk model, der beskriver, hvor mange genetiske varianter der har betydning for egenskaben, og hvordan deres effekter er fordelt. Resultaterne gemmes i en outputfil, som kan bruges til videre analyser. 
+Denne kode kører MiXeR’s univariate fit-analyse på et sæt GWAS-summary statistics. Koden læser først GWAS-dataene fra den angivne fil og udvælger de SNPs, der skal indgå i analysen, baseret på en separat liste. I koden bruges der referencefiler, der indeholder information om SNP-positioner og deres indbyrdes genetiske sammenhæng (linkage disequilibrium). Ud fra dette estimerer MiXeR en statistisk model, der beskriver, hvor mange SNP's der har betydning for den mentale lidelse, og hvordan deres effekter er fordelt. Resultaterne gemmes i en outputfil, som kan bruges til videre analyser. 
+
+link til fit kode 
 
 #### Test kode
-Denne kode anvender MiXeR’s test-funktion til at evaluere den statistiske model, der blev estimeret med fit-analysen. Koden indlæser de samme GWAS-summary statistics samt de parametre, der blev beregnet i fit-trinnet (fra en JSON-fil). Med de samme referencefiler for genetiske varianter og deres indbyrdes sammenhæng tester MiXeR, hvor godt den estimerede model passer til de observerede data. Resultatet gemmes i en outputfil 
+Denne kode anvender MiXeR’s test-funktion til at evaluere den statistiske model, der blev estimeret med fit-analysen. Koden indlæser de samme GWAS-summary statistics samt de parametre, der blev beregnet i fit-trinnet (fra en JSON-fil). Med de samme referencefiler for SNP's og deres indbyrdes sammenhæng tester MiXeR, hvor godt den estimerede model passer til de observerede data. Resultatet gemmes i en outputfil 
+
+link til test kode 
 
 ### Bivariat analyse
-Beskrivelse og kode til bivariat analyse.
+Den bivariate analyse med MiXeR bruges til at undersøge, hvor meget anoreksi og en anden mental lidelse eller et andet træk deler af deres genetiske baggrund, baseret på GWAS-summary statistics. I alle bivariate analyser i dette projekt indgår anoreksi altid som det ene træk. Analysen estimerer både, hvor mange SNPs der er unikke for anoreksi, hvor mange der er unikke for det andet træk, og hvor mange der er fælles mellem dem. På den måde giver analysen et detaljeret billede af, hvordan genetiske faktorer er delt eller adskilt mellem anoreksi og andre komplekse sygdomme eller træk.
+
+Som ved de univariate analyser er koden opdelt i en fit-kode og en test-kode.
+
+#### Fit kode
+Denne kode udfører en bivariatanalyse med MiXeR, hvor der sammenlignes genetiske data fra anoreksi og en anden mental lidelse eller et andet træk. Koden starter med at indlæse GWAS-summary statistics for både anoreksi og det andet træk samt de parametre, der tidligere er estimeret fra de tilsvarende univariate analyser (fit- og test-outputfiler for hvert træk). Herefter udvælges de SNPs, der skal indgå i analysen, baseret på en foruddefineret liste, og der anvendes referencefiler, som beskriver SNP-positioner og linkage disequilibrium mellem SNPs. Med disse input kører MiXeR’s bivariate fit-model, hvor det estimeres, hvor mange SNPs der er unikke for anoreksi, hvor mange der er unikke for det andet træk, hvor mange der er fælles, og hvordan effekterne af de fælles SNPs fordeler sig mellem de to træk. Resultaterne fra analysen gemmes i en outputfil, som efterfølgende bruges i visualiseringskoden.
+link til fit kode 
+
+#### Test kode 
+Denne kode udfører en bivariatanalyse med MiXeR, hvor formålet er at teste og validere den model, der blev estimeret i bivariate fit-trinnet for anoreksi og det andet træk. Koden indlæser GWAS-summary statistics for både anoreksi og det andet træk samt de parametre for genetisk overlap og forskelle, der blev beregnet i den forudgående bivariate fit-analyse. Ved hjælp af de samme referencefiler for SNP-positioner og linkage disequilibrium anvender MiXeR den estimerede model på de observerede data og vurderer, hvor godt modellen passer til dataene for begge træk. Resultaterne fra denne test gemmes i en outputfil, som bruges i visualiseringerne.
+link til test kode 
 
 ### Visualiseringskode
-Kode til at generere figurer.
+Til visualisering af vores resultater har vi tre forskellige typer plots:
+- Powerplot: Baseret på de univariate analyser for de forskellige mentale lidelser og træk.
+- Bivariate plots: Udarbejdet på baggrund af de bivariate analyser, hvor anoreksi altid indgår som det ene træk over for forskellige mentale lidelser eller træk.
+- Robusthedsplot: Her undersøges, hvordan resultaterne påvirkes af, hvilke udsnit af referencepanelet der anvendes i analyserne, for at sikre at resultaterne ikke skyldes valg af referencedata.
+
 
 #### Powerplot
-Kode og kort beskrivelse.
+Powerplottet visualiserer, hvor stor en andel af den genetiske variation der kan opdages givet GWAS-størrelse og polygenicitet for de enkelte mentale lidelser og træk.
+
+link til visualiserings kode
 
 #### Bivariateplot
-Kode og kort beskrivelse.
+De bivariate plots fra MiXeR illustrerer det genetiske overlap og forskelle mellem anoreksi og andre mentale lidelser eller træk, baseret på GWAS-summary statistics. For hver bivariatanalyse genereres fire plots:
+Et Venn-diagram, som viser antallet af SNPs, der er unikke for anoreksi, unikke for det andet træk, og som er fælles mellem dem.
+To QQ-plots, der sammenligner de observerede og forventede GWAS test-statistikker for henholdsvis anoreksi og det andet træk.
+Et log-likelihood plot, som viser modellens tilpasning og robusthed.
+
+Venn-diagrammet og log-likelihood plottet laves ud fra outputfilen fra bivariate fit-analysen, mens QQ-plots laves ud fra outputfilen fra bivariate test-analysen.
+
+link til bivariateplot kode 
 
 ## Visualiseringer
 
-- **Powerplot**: Forklaring og billede/link.
+- **Powerplot**: Forklaring og billede.
 - **Bivariateplot**: Forklaring og billede/link.
-- **Robusthedplot**: Forklaring og billede/link.
+- **Robusthedplot**: Forklaring og billede.
 
 ## Ekstra læsning
 
