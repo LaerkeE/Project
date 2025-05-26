@@ -120,7 +120,7 @@ I hver iteration blev der genereret en log-likelihood-kurve, som viser modellens
 ## Visualiseringer
 
 - **Powerplot**:
-  ![Powerplot for anoreksi](figures/powerplot.png)
+  ![Powerplot for alt data](https://github.com/LaerkeE/Project/blob/main/figures/Powerplot.png)
 - **Bivariateplot**: Forklaring og billede
    [Se resten af plotene her](figures/Bivariate_plots) 
 - **Robusthedplot**: Forklaring og billede.
