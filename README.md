@@ -47,7 +47,7 @@ README-filen fungerer som en guide til projektet.
 Når du læser README’en, vil du løbende finde links til de relevante mapper og scripts. Følg teksten og linksene for at få en logisk gennemgang af projektets arbejdsgang – fra data og analyser til visualiseringer og resultater.
 
 #### Tip:
-Hvis under tidsbegrænsning, for at få et overblik over projektets workflow og vigtigste resultater, anbefaler vi at læse afsnittene om:
+Hvis under tidpress, for at få et overblik over projektets workflow og vigtigste resultater, anbefaler vi at læse afsnittene om:
 Univariat analyse
 Bivariat analyse
 Visualiseringer
