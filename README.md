@@ -25,6 +25,16 @@ I kode mapperne for den Univairate og Bivariate analyse er der kun vist et eksem
 
 I mappen for visualiseringer findes alle de bivariate plots, der er genereret som en del af analyserne. For at gøre README-filen overskuelig og let at følge, er kun ét eksempel på et bivariant plot inkluderet direkte her i dokumentationen. Dette gør det muligt at se et konkret plot sammen med forklaringen, mens de øvrige plots kan findes i visualiseringsmappen, hvis man ønsker at se flere resultater 
 
+## Outputfiler
+Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer. Disse outputfiler indeholder de estimerede parametre, statistikker og resultater fra både de univariate og bivariate analyser.
+[Se mappen her](CSV filer) 
+
+
+## Oprindelse af data
+
+Alle anvendte data er hentet fra [GWAS Catalog](https://www.ebi.ac.uk/gwas/). Da datasættene indeholder mange tusinde rækker og fylder meget, er det ikke muligt at inkludere dem direkte i GitHub-repositoriet. Hvis du ønsker at genskabe analyserne, kan du selv downloade dataene fra ovenstående kilde.
+
+
 ## Kode
 Her findes en beskrivelse af al kode, der er blevet brugt i projektet.
 *Måske nævne noget med at downloade summary statistic* 
