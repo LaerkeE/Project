@@ -121,15 +121,18 @@ I hver iteration blev der genereret en log-likelihood-kurve, som viser modellens
 ## Visualiseringer
 
 - **Powerplot**:
-  ![Powerplot for alt data](https://github.com/LaerkeE/Project/blob/main/figures/Powerplot.png)
-powerplottet bruges som en grafisk fremstilling, til at vise, hvor stor en andel af den genetiske arvelighed, vi forventer at kunne detektere i en GWAS, afhængigt af sample size. Powerplottet illustrerer altså, hvor stor en stikprøvestørrelse der skal til for at forklare en bestemt andel af arvbarheden for den givne lidelse eller træk.
+![Powerplot for alt data](https://github.com/LaerkeE/Project/blob/main/figures/Powerplot.png)
+Powerplottet bruges som en grafisk fremstilling, til at vise, hvor stor en andel af den genetiske arvelighed, vi forventer at kunne detektere i en GWAS, afhængigt af sample size. Powerplottet illustrerer altså, hvor stor en stikprøvestørrelse der skal til for at forklare en bestemt andel af arvbarheden for den givne lidelse eller træk.
 I vores powerplot kan vi se, at data for kontinuerte træk (fx Hight) har en højere power end data for binære mentale lidelser (fx anoreksi).
 Ud fra powerplottet kan vi se at ud fra vores data er det mulighed at forklarer 76 % af arvligheden for Height, 21 % af arveligheden for BMI og 13 % af arveligheden for educational attainment. 
 Derimod kan vi kun forklarer 1 % af arveligheden af ADHD og 0 % af arveligheden for henholdsvis persistent thinness, Autisme og anoreksi. 
 Det giver os også en idé om, hvor meget mere vi kunne opdage ved at øge stikprøvestørrelsen.
-- **Bivariateplot**: Forklaring og billede
+- **Bivariateplot**:
+ ![Bivariateplot for AN vs ADHD](https://github.com/LaerkeE/Project/blob/main/figures/Bivariate_plots/PGC_AN_2019_qc_noMHC_vs_ADHD_2022_noMHC_Visualization.png)
+På vores bivariate plot har vi 4 forskellige figure. Et venn diagram, to QQ plots og et log-likelighood plot
    [Se resten af plotene her](figures/Bivariate_plots) 
-- **Robusthedplot**: Forklaring og billede.
+- **Robusthedplot**:
+[Robushed log-likelihood plot](https://github.com/LaerkeE/Project/blob/main/figures/Robustheds_plots/log_likelihood_combined.png)
   [Se resten af plotene her](figures/Robustheds_plots) 
 ## Ekstra læsning
 
