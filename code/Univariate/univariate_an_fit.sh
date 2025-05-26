@@ -18,14 +18,14 @@ python3.7 /home/$USER/mixer/precimed/mixer.py fit1 \
 
 # line 1: Fit1 estimates genetic parameters related to polygenicity and effect size distribution.
 
-# line 2: specify the GWAS summary statics file. Which contail SNP effect, allele mm.
+# line 2 specifies the GWAS summary statics file. Which contains SNP effect, allele mm.
 
-# Line 3 gives the output a name. Each SLURM job runs an independent replicate. to improve estimation.
+# Line 3 gives the output a name. Each SLURM job runs an independent replicate. To improve estimation.
 
-# line 4 extracts a subset of SNP from the reference data. it sets up some filters for the subset
+# line 4 extracts a subset of SNPs from the reference data. It sets up some filters for the subset
 
-# Line 5 specify the plink bim file which have the SNP genomic position and allele info
+# Line 5 specifies the plink bim file which has the SNP genomic position and allele info
 
-# line 6 Specify the LD file
+# line 6 specifies the LD file
 
 # line 7 This is a shared library (.so file) that contains precompiled C++/C code for fast computations in MIXER.
