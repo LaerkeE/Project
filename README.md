@@ -6,6 +6,8 @@ Dette repository indeholder kode, visualiseringer og baggrundsmateriale til data
 
 - [Introduktion](#introduktion)
 - [Projektstruktur](#projektstruktur)
+- [Outputfiler](#Outputfiler)
+- [Oprindelse af data](#Oprindelse af data)
 - [Kode](#kode)
   - [Univariat analyse](#univariat-analyse)
   - [Bivariat analyse](#bivariat-analyse)
