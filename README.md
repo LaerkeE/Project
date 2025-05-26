@@ -7,7 +7,9 @@ Dette repository indeholder kode, visualiseringer og baggrundsmateriale til data
 - [Introduktion](#introduktion)
 - [Projektstruktur](#projektstruktur)
 - [Outputfiler](#Outputfiler)
-- [Oprindelse af data](#Oprindelse-af-data)
+- [Data](#Data)
+  - [Oprindelse af data](#Oprindelse-af-data)
+  - [Hvad er GWAS-summary statistics](Hvad-er-GWAS-summary-statistics)
 - [Kode](#kode)
   - [Univariat analyse](#univariat-analyse)
   - [Bivariat analyse](#bivariat-analyse)
@@ -31,15 +33,29 @@ I mappen for visualiseringer findes alle de bivariate plots, der er genereret so
 Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer. Disse outputfiler indeholder de estimerede parametre, statistikker og resultater fra både de univariate og bivariate analyser.
 [Se mappen her](CSV filer) 
 
-
-## Oprindelse af data
+## Data
+### Oprindelse af data
 
 Alle anvendte data er hentet fra [GWAS Catalog](https://www.ebi.ac.uk/gwas/). Da datasættene indeholder mange tusinde rækker og fylder meget, er det ikke muligt at inkludere dem direkte i GitHub-repositoriet. Hvis du ønsker at genskabe analyserne, kan du selv downloade dataene fra ovenstående kilde.
 
+### Hvad er GWAS-summary statistics
+I dette projekt anvendes GWAS-summary statistics som grunddata for vores univariate analyser.
+GWAS (Genome-Wide Association Studies) er store genetiske undersøgelser, hvor man undersøger sammenhængen mellem genetiske varianter (typisk SNPs) og en bestemt sygdom eller egenskab.
+Summary statistics er resultaterne fra disse undersøgelser, typisk i form af tabeller, hvor hver række svarer til én genetisk variant og indeholder information om fx:
+
+SNP-ID (navn på varianten)
+Hvilke alleler der er undersøgt (A1/A2)
+Effektstørrelse (hvor meget varianten påvirker sygdommen)
+Standardfejl og p-værdi (statistisk usikkerhed og signifikans)
+Antal cases og kontroller
+
+Summary statistics bruges som input til MiXeR-analyserne, hvor de danner grundlag for at estimere, hvor mange genetiske varianter der bidrager til en sygdom, og hvor meget genetisk overlap der er mellem forskellige sygdomme eller træk.
 
 ## Kode
 Her findes en beskrivelse af al kode, der er blevet brugt i projektet.
-*Måske nævne noget med at downloade summary statistic* 
+Før analyserne kan køres, skal summary statistics forbehandles og konverteres til det rigtige format. Dette indebærer at indlæse rådata, omdøbe kolonner og gemme data i et format, der kan bruges i MiXeR-analysen.
+Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer
+[Se scriptet her](https://github.com/LaerkeE/Project/blob/main/code/Univariate/summary_stats_an.sh)
 
 Bemærk: Koden, som er vist her i projektet, kan ikke køres direkte, da filstierne og miljøet er tilpasset et High Performance Computing (HPC) cluster. 
 ### Univariat analyse
@@ -48,7 +64,9 @@ Den univariate analyse bruges til at estimere, hvor mange SNP's der samlet set h
 Koden er delt op i en fit-kode og en test-kode.
 
 #### Fit kode
-Denne kode kører MiXeR’s univariate fit-analyse på et sæt GWAS-summary statistics. Koden læser først GWAS-dataene fra den angivne fil og udvælger de SNPs, der skal indgå i analysen, baseret på en separat liste. I koden bruges der referencefiler, der indeholder information om SNP-positioner og deres indbyrdes genetiske sammenhæng (linkage disequilibrium). Ud fra dette estimerer MiXeR en statistisk model, der beskriver, hvor mange SNP's der har betydning for den mentale lidelse, og hvordan deres effekter er fordelt. Resultaterne gemmes i en outputfil, som kan bruges til videre analyser. 
+Denne kode kører MiXeR’s univariate fit-analyse på et sæt GWAS-summary statistics. Koden læser først GWAS-dataene fra den angivne fil og udvælger de SNPs, der skal indgå i analysen, baseret på en separat liste. I koden bruges der referencefiler, der indeholder information om SNP-positioner og deres indbyrdes genetiske sammenhæng (linkage disequilibrium).
+[Se mappen her](code/Reference)
+Ud fra dette estimerer MiXeR en statistisk model, der beskriver, hvor mange SNP's der har betydning for den mentale lidelse, og hvordan deres effekter er fordelt. Resultaterne gemmes i en outputfil, som kan bruges til videre analyser. 
 
 [Se scriptet her](https://github.com/LaerkeE/Project/blob/main/code/Univariate/univariate_an_fit.sh)
 
@@ -93,9 +111,16 @@ Venn-diagrammet og log-likelihood plottet laves ud fra outputfilen fra bivariate
 
 [Se scriptet her](https://github.com/LaerkeE/Project/blob/main/code/Visualiseringer/Bivariate_visual_ANvsADHD.sh)
 
+#### Robusthedskode
+For at undersøge, hvor robuste vores resultater er over for valg af referencepanel, har vi udført en robusthedsanalyse. Her gentog vi den bivariate analyse mellem anoreksi og ADHD fem gange, hvor vi hver gang brugte forskellige udsnit af vores referencepanel. Formålet er at sikre, at vores resultater ikke er drevet af tilfældige variationer i udvalget af reference-SNPs, men faktisk er konsistente på tværs af forskellige datasæt.
+
+I hver iteration blev der genereret en log-likelihood-kurve, som viser modellens tilpasning for det pågældende referenceudsnit. Disse kurver blev herefter sammenlignet og visualiseret samlet, så man kan vurdere variationen mellem de fem analyser.
+[Se scriptet her](https://github.com/LaerkeE/Project/blob/main/code/Robusthed/Iterations.py)
+
 ## Visualiseringer
 
-- **Powerplot**: Forklaring og billede.
+- **Powerplot**:
+  ![Powerplot for anoreksi](figures/powerplot.png)
 - **Bivariateplot**: Forklaring og billede
    [Se resten af plotene her](figures/Bivariate_plots) 
 - **Robusthedplot**: Forklaring og billede.
