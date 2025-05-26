@@ -132,7 +132,7 @@ Det giver os også en idé om, hvor meget mere vi kunne opdage ved at øge stikp
 På vores bivariate plot har vi 4 forskellige figure. Et venn diagram, to QQ plots og et log-likelighood plot
    [Se resten af plotene her](figures/Bivariate_plots) 
 - **Robusthedplot**:
-[Robushed log-likelihood plot](https://github.com/LaerkeE/Project/blob/main/figures/Robustheds_plots/log_likelihood_combined.png)
+![Robushed log-likelihood plot](https://github.com/LaerkeE/Project/blob/main/figures/Robustheds_plots/log_likelihood_combined.png)
   [Se resten af plotene her](figures/Robustheds_plots) 
 ## Ekstra læsning
 
