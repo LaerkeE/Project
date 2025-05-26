@@ -23,29 +23,24 @@ Kort beskrivelse af projektets formål, problemstilling og hvorfor MiXer-metoden
 
 ## Projektstruktur
 Projektet er organiseret i tre hovedmapper, så du nemt kan finde data, kode og resultater:
-CSV filer:
+- CSV filer:
 Indeholder alle CSV-filer, der er blevet produceret fra analyserne. Her ligger både rå og behandlede data samt output fra de forskellige analyser.
 
-code:
+- code:
 Indeholder al kode, opdelt i undermapper efter analysetype:
 
-Bivariate: Kode til bivariate analyser (genetisk overlap mellem to træk).
+  - Bivariate: Kode til bivariate analyser (genetisk overlap mellem to træk).
+  - Univariate: Kode til univariate analyser (genetisk arkitektur for ét træk).
+  - Robusthed: Kode til robusthedsanalyser (gentagne analyser med forskellige referenceudsnit).
+  - Reference: Kode og scripts af referencepaneler.
+  - Visualiseringer: Kode til at generere plots og figurer.
 
-Univariate: Kode til univariate analyser (genetisk arkitektur for ét træk).
-
-Robusthed: Kode til robusthedsanalyser (gentagne analyser med forskellige referenceudsnit).
-
-Reference: Kode og scripts af referencepaneler.
-
-Visualiseringer: Kode til at generere plots og figurer.
-
-figures:
+- figures:
 Indeholder alle genererede figurer og plots.
 Denne mappe har to undermapper:
 
-Bivariateplots: Indeholder alle bivariate plots fra analyserne.
-
-Robusthedsplots: Indeholder alle plots fra robusthedsanalyserne.
+  - Bivariateplots: Indeholder alle bivariate plots fra analyserne.
+  - Robusthedsplots: Indeholder alle plots fra robusthedsanalyserne.
 
 ### Sådan bruger du README-filen
 README-filen fungerer som en guide til projektet.
