@@ -117,10 +117,16 @@ For at undersøge, hvor robuste vores resultater er over for valg af referencepa
 I hver iteration blev der genereret en log-likelihood-kurve, som viser modellens tilpasning for det pågældende referenceudsnit. Disse kurver blev herefter sammenlignet og visualiseret samlet, så man kan vurdere variationen mellem de fem analyser.
 [Se scriptet her](https://github.com/LaerkeE/Project/blob/main/code/Robusthed/Iterations.py)
 
+
 ## Visualiseringer
 
 - **Powerplot**:
   ![Powerplot for alt data](https://github.com/LaerkeE/Project/blob/main/figures/Powerplot.png)
+powerplottet bruges som en grafisk fremstilling, til at vise, hvor stor en andel af den genetiske arvelighed, vi forventer at kunne detektere i en GWAS, afhængigt af sample size. Powerplottet illustrerer altså, hvor stor en stikprøvestørrelse der skal til for at forklare en bestemt andel af arvbarheden for den givne lidelse eller træk.
+I vores powerplot kan vi se, at data for kontinuerte træk (fx Hight) har en højere power end data for binære mentale lidelser (fx anoreksi).
+Ud fra powerplottet kan vi se at ud fra vores data er det mulighed at forklarer 76 % af arvligheden for Height, 21 % af arveligheden for BMI og 13 % af arveligheden for educational attainment. 
+Derimod kan vi kun forklarer 1 % af arveligheden af ADHD og 0 % af arveligheden for henholdsvis persistent thinness, Autisme og anoreksi. 
+Det giver os også en idé om, hvor meget mere vi kunne opdage ved at øge stikprøvestørrelsen.
 - **Bivariateplot**: Forklaring og billede
    [Se resten af plotene her](figures/Bivariate_plots) 
 - **Robusthedplot**: Forklaring og billede.
