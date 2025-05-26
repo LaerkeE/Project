@@ -22,12 +22,41 @@ Dette repository indeholder kode, visualiseringer og baggrundsmateriale til data
 Kort beskrivelse af projektets formål, problemstilling og hvorfor MiXer-metoden er valgt.
 
 ## Projektstruktur
+Projektet er organiseret i tre hovedmapper, så du nemt kan finde data, kode og resultater:
+CSV filer:
+Indeholder alle CSV-filer, der er blevet produceret fra analyserne. Her ligger både rå og behandlede data samt output fra de forskellige analyser.
 
-Projektet er organiseret, så det er nemt at finde rundt i de forskellige typer filer og forstå arbejdsgangen fra data til resultater.
+code:
+Indeholder al kode, opdelt i undermapper efter analysetype:
 
-I kode mapperne for den Univairate og Bivariate analyse er der kun vist et eksempel på, hvordan koden ser ud. Selve kommandoerne og arbejdsgangen er ens for alle analyser; det, der varierer fra analyse til analyse, er hvilke datafiler der anvendes som input. Det betyder, at du kan genbruge den samme kode til forskellige analyser ved blot at udskifte de relevante datafiler, alt efter hvilke træk eller sygdomme du ønsker at undersøge.
+Bivariate: Kode til bivariate analyser (genetisk overlap mellem to træk).
 
-I mappen for visualiseringer findes alle de bivariate plots, der er genereret som en del af analyserne. For at gøre README-filen overskuelig og let at følge, er kun ét eksempel på et bivariant plot inkluderet direkte her i dokumentationen. Dette gør det muligt at se et konkret plot sammen med forklaringen, mens de øvrige plots kan findes i visualiseringsmappen, hvis man ønsker at se flere resultater 
+Univariate: Kode til univariate analyser (genetisk arkitektur for ét træk).
+
+Robusthed: Kode til robusthedsanalyser (gentagne analyser med forskellige referenceudsnit).
+
+Reference: Kode og scripts af referencepaneler.
+
+Visualiseringer: Kode til at generere plots og figurer.
+
+figures:
+Indeholder alle genererede figurer og plots.
+Denne mappe har to undermapper:
+
+Bivariateplots: Indeholder alle bivariate plots fra analyserne.
+
+Robusthedsplots: Indeholder alle plots fra robusthedsanalyserne.
+
+### Sådan bruger du README-filen
+README-filen fungerer som en guide til projektet.
+Når du læser README’en, vil du løbende finde links til de relevante mapper og scripts. Følg teksten og linksene for at få en logisk gennemgang af projektets arbejdsgang – fra data og analyser til visualiseringer og resultater.
+
+#### Tip:
+Hvis under tidsbegrænsning, for at få et overblik over projektets workflow og vigtigste resultater, anbefaler vi at læse afsnittene om:
+Univariat analyse
+Bivariat analyse
+Visualiseringer
+Her finder du både forklaringer, eksempler og direkte links til kode og figurer.
 
 ## Outputfiler
 Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer. Disse outputfiler indeholder de estimerede parametre, statistikker og resultater fra både de univariate og bivariate analyser.
@@ -132,9 +161,10 @@ Det giver os også en idé om, hvor meget mere vi kunne opdage ved at øge stikp
 På vores bivariate plot har vi 4 forskellige figure. Et venn diagram, to QQ plots og et log-likelighood plot
    [Se resten af plotene her](figures/Bivariate_plots) 
 - **Robusthedplot**:
-![Robushed log-likelihood plot](https://github.com/LaerkeE/Project/blob/main/figures/Robustheds_plots/log_likelihood_combined.png)
+![Robushed log-likelihood plot](https://github.com/LaerkeE/Project/blob/main/figures/Robustheds_plots/loglikelihood_models.png)
   [Se resten af plotene her](figures/Robustheds_plots) 
 ## Ekstra læsning
 
-Links til relevante artikler, dokumentation og evt. slides.
+Hvis ektra tid kan denne artikel læses angående MiXeR metoden
+[Se artiklen her](https://psychiatryonline.org/doi/10.1176/appi.ajp.21101051)
 
