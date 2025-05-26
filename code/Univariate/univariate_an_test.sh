@@ -16,8 +16,8 @@ python3.7 /home/$USER/mixer/precimed/mixer.py test1 \
 
 # line 1: Calls mizer script and run the test mode of mixer to evaluate the fitted model 
 # Line 2: Specify the file for the trait being analyzed. The data we test the model on
-# line 3: Loads the file containing the model paramenters. fit1 step. This provide the the trainded model
+# line 3: Loads the file containing the model paramenters. fit1 step. This provides the trained model
 # line 4: Specify where the output should be stored
-# line 5: provides a plink bim file that have the SNP positions and the allele info
+# line 5: provides a plink bim file that has the SNP positions and the allele info
 # line 6: provided LD information
 # Line 7: loads a shared C++ library required by MIXER for efficient computation.
