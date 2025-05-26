@@ -154,6 +154,48 @@ Det giver os også en idé om, hvor meget mere vi kunne opdage ved at øge stikp
 - **Bivariateplot**:
  ![Bivariateplot for AN vs ADHD](https://github.com/LaerkeE/Project/blob/main/figures/Bivariate_plots/PGC_AN_2019_qc_noMHC_vs_ADHD_2022_noMHC_Visualization.png)
 På vores bivariate plot har vi 4 forskellige figure. Et venn diagram, to QQ plots og et log-likelighood plot
+
+#### Venn diagrammet
+Venn-diagrammet viser det gennemsnitlige antal kausale varianter (i tusinder), der er nødvendige for at forklare 90% af SNP-baseret arvelighed (h2SNP) for de to træk.
+Diagrammet er delt i tre områder:
+Kun anoreksi: Antal kausale varianter, der kun er forbundet med anoreksi.
+
+- **Kun det andet træk eller mentale lidelse:** Antal kausale varianter, der kun er forbundet med det andet træk eller mentale lidelse.
+- **Delte varianter**: Antal kausale varianter, der er fælles for begge træk og forklarer 90% af den genetiske variation. Estimatets standardafvigelse er angivet i parentes.
+Disse tal beregnes ved at simulere 10.000 kausale effekter, sortere dem efter effektstyrke og identificere, hvor stor en andel (π₁₂ · Nₛₙₚ) der samlet forklarer 90% af arveligheden.
+Under Venn diagrammet har vi en tabel som indeholder
+- **Genetisk korrelation (rg):** Udtrykker den total genetiske korrelation. Altså hvor meget af den genetiske variation der er fælles mellem de to træk.
+- **Korrelation af delte varianter (𝜌𝛽):** Hvor ens effekterne er for de varianter, der påvirker begge træk.
+- **Konkordansrate (cr):** Andelen af delte varianter, der har samme effektretning på begge træk.
+  
+#### QQ-plots
+
+QQ-plots bruges til at vise, om der er flere genetiske sammenhænge mellem to træk, end forventet ved tilfældighed.  
+Der laves to QQ-plots per analyse:  
+- Trait1 | Trait2: Viser om SNPs, der er associeret med Trait2, også har effekt på Trait1.
+- Trait2 | Trait1: Det modsatte.
+
+- **X-akse:** Forventede værdier uden sammenhæng.
+- **Y-akse:** Faktiske værdier fra GWAS.
+- **Farvet solid linje:** Observeret data for SNP subset.
+- **Farvet stiplet linje:** Model forudsigelse for SNP subset.
+
+Hvis de farvede linjer ligger over diagonalen og den blå linje, tyder det på genetisk overlap.  
+Hvis solid og stiplet linje følges ad, passer modellen godt til data.  
+Hvis de afviger, passer modellen mindre godt for den gruppe.
+
+Overlappet kan være asymmetrisk, især hvis datasættene har forskellig power. Det store datasæt vil lettere opfange signaler, mens det lille datasæt ofte vil følge diagonalen.
+
+#### Log-likelihood plot og AICmin/AICmax
+
+Log-likelihood plottet viser, hvor godt MiXeR-modellen passer til data, sammenlignet med to reference-modeller:
+
+- **AICmin:** Sammenligner MiXeR-modellen med en minimum overlap-model, hvor andelen af delte kausale varianter beregnes ud fra genetisk korrelation og antallet af kausale varianter i hvert træk. En positiv AICmin-værdi betyder, at MiXeR-modellen giver en bedre tilpasning end minimumsmodellen.
+
+- **AICmax:** Sammenligner MiXeR-modellen med en maximum overlap-model, hvor alle kausale varianter i det mindst polygeniske træk også findes i det mest polygeniske træk. En negativ AICmax-værdi kan indikere, at trækkene er næsten identiske, og at en simpel model med fuldt overlap er tilstrækkelig.
+
+Hvis MiXeR-modellen har en positiv AICmin, passer den bedre end minimumsmodellen. Hvis AICmax er negativ, er en model med fuldt overlap tilstrækkelig til at forklare sammenhængen mellem trækkene.
+
    [Se resten af plotene her](figures/Bivariate_plots) 
 - **Robusthedplot**:
 ![Robushed log-likelihood plot](https://github.com/LaerkeE/Project/blob/main/figures/Robustheds_plots/loglikelihood_models.png)
