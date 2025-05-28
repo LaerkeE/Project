@@ -102,9 +102,9 @@ Et Manhattan-plot er en grafisk præsentation af resultaterne fra GWAS, hvor man
 På plottet:
 
 - X-aksen viser de genetiske positioner, sorteret efter kromosomer.
-- Y-aksen viser -log_{10}(p)-værdien for hver SNP - jo højere punktet er, desto stærkere er den statistiske evidens for association.
+- Y-aksen viser -log$_{10}$(p)-værdien for hver SNP - jo højere punktet er, desto stærkere er den statistiske evidens for association.
 
-Tærsklen for genome-wide signifikans vises ved den røde horisontale linje (p=5\times10^{-8}).
+Tærsklen for genome-wide signifikans vises ved den røde horisontale linje ($p=5\times10^{-8}$).
 
 Manhattan-plottet bruges til at give et hurtigt overblik over, hvilke områder af genomet der indeholder signifikante signaler.
 
