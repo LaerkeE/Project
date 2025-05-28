@@ -77,7 +77,7 @@ Her finder du både forklaringer, eksempler og direkte links til kode og figurer
 
 ## Outputfiler
 Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer. Disse outputfiler indeholder de estimerede parametre, statistikker og resultater fra både de univariate og bivariate analyser.
-[Se mappen her](CSV filer) 
+[Se mappen her](https://github.com/LaerkeE/Project/tree/main/CSV%20filer) 
 
 ## Data
 ### Oprindelse af data
