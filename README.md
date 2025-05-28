@@ -39,7 +39,7 @@ Dette gøres ved at maksimere en multinomial likelihood vha. numerisk optimering
 
 Metoden muliggør kvantificering af både genetisk overlap og træk-specifik polygenicitet samt robust estimering af effektstørrelser og residual inflation i GWAS-data.
 
-Analysen er udført via NoMachine, et fjernskrivebordsværktøj, der giver adgang til et HPC miljø. NoMachine er anvendt for at kunne håndtere og analysere de store datamængder, som arbejdet med genetiske data fra GWAS kræver.\newline
+Analysen er udført via NoMachine, et fjernskrivebordsværktøj, der giver adgang til et HPC miljø. NoMachine er anvendt for at kunne håndtere og analysere de store datamængder, som arbejdet med genetiske data fra GWAS kræver.
 
 Som en del af projektet har vi derfor skullet lære at navigere i systemet, herunder arbejde i terminalmiljø, håndtere filer og afvikle kode på et HPC. Analyserne kan desuden være tidskrævende - både på grund af lange beregningstider og fordi man ofte skal vente i kø, før ens job bliver kørt.
 
