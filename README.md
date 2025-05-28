@@ -97,6 +97,8 @@ Antal cases og kontroller
 
 Summary statistics bruges som input til MiXeR-analyserne, hvor de danner grundlag for at estimere, hvor mange genetiske varianter der bidrager til en sygdom, og hvor meget genetisk overlap der er mellem forskellige sygdomme eller træk.
 
+![Manhatten plot](https://github.com/LaerkeE/Project/blob/main/figures/Sk%C3%A6rmbillede%202025-02-17%20172026.png)
+
 Et Manhattan-plot er en grafisk præsentation af resultaterne fra GWAS, hvor man visualiserer styrken af associationen mellem SNPs og et givent træk på tværs af hele genomet.
 
 På plottet:
