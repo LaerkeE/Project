@@ -19,7 +19,25 @@ Dette repository indeholder kode, visualiseringer og baggrundsmateriale til data
 
 ## Introduktion
 
-Kort beskrivelse af projektets formål, problemstilling og hvorfor MiXer-metoden er valgt.
+Projektet går ud på at undersøge sammenhængen mellem genetiske varianter (forskelle i DNA-sekvensen mellem individer) og mentale lidelser. Specifikt undersøges sammenhængen mellem anoreksi og andre træk. Målet er at estimere genetisk korrelation, andelen af delte varianter mellem disse træk og hvorvidt de overlappende genetiske varianter har en ensartet eller modsatvirkende effekt.
+
+Analysen udføres ved hjælp af MiXeR-softwaren på et High Performance Cluster (HPC). MiXeR er en statistisk metode, der estimerer polygenicitet og genetisk overlap mellem træk ud fra GWAS summary statistics og LD-struktur.
+
+Modellen antager, at effekterne af genetiske varianter kan opdeles i to grupper:
+
+- Kausale varianter, hvis effektstørrelser følger en normalfordeling.
+- Ikke-kausale varianter, som antages at have nul effekt (Dirac-deltafunktion).
+
+Ved at anvende en bivariat mixture-model estimerer MiXeR:
+
+- Antal varianter med fælles kausal effekt på begge træk.
+- Antal varianter, der er specifikke for hvert træk.
+- Antal varianter uden effekt på nogen af trækkene.
+
+Modelparametre estimeres ved at matche den observerede fordeling af z-scorer (grupperet efter LD og heterozygositet) til modellens forventede fordeling.
+Dette gøres ved at maksimere en multinomial likelihood vha. numerisk optimering (Nelder-Mead).
+
+Metoden muliggør kvantificering af både genetisk overlap og træk-specifik polygenicitet samt robust estimering af effektstørrelser og residual inflation i GWAS-data.
 
 ## Projektstruktur
 Projektet er organiseret i tre hovedmapper, så du nemt kan finde data, kode og resultater:
