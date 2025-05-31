@@ -82,7 +82,7 @@ Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer. Dis
 ## Data
 ### Oprindelse af data
 
-Alle anvendte data er hentet fra [GWAS Catalog](https://www.ebi.ac.uk/gwas/). Da datasættene indeholder mange tusinde rækker og fylder meget, er det ikke muligt at inkludere dem direkte i GitHub-repositoriet. Hvis du ønsker at genskabe analyserne, kan du selv downloade dataene fra ovenstående kilde.
+Alle anvendte data er hentet fra [GWAS Catalog](https://www.ebi.ac.uk/gwas/). Da datasættene indeholder mange tusinde rækker og fylder meget, er det ikke muligt at inkludere dem direkte i GitHub-repositoriet. Hvis du ønsker at genskabe analyserne, kan du downloade dataene fra ovenstående kilde.
 
 ### Hvad er GWAS-summary statistics
 I dette projekt anvendes GWAS-summary statistics som grunddata for vores univariate analyser.
@@ -182,9 +182,9 @@ I hver iteration blev der genereret en log-likelihood-kurve, som viser modellens
 - **Powerplot**:
 ![Powerplot for alt data](https://github.com/LaerkeE/Project/blob/main/figures/Powerplot.png)
 Powerplottet bruges som en grafisk fremstilling, til at vise, hvor stor en andel af den genetiske arvelighed, vi forventer at kunne detektere i en GWAS, afhængigt af sample size. Powerplottet illustrerer altså, hvor stor en stikprøvestørrelse der skal til for at forklare en bestemt andel af arvbarheden for den givne lidelse eller træk.
-I vores powerplot kan vi se, at data for kontinuerte træk (fx Hight) har en højere power end data for binære mentale lidelser (fx anoreksi).
-Ud fra powerplottet kan vi se at ud fra vores data er det mulighed at forklarer 76 % af arvligheden for Height, 21 % af arveligheden for BMI og 13 % af arveligheden for educational attainment. 
-Derimod kan vi kun forklarer 1 % af arveligheden af ADHD og 0 % af arveligheden for henholdsvis persistent thinness, Autisme og anoreksi. 
+I vores powerplot kan vi se, at data for kontinuerte træk (fx Height) har en højere power end data for binære mentale lidelser (fx anoreksi).
+Ud fra powerplottet ses det, at med vores data er det muligt at forklare 76 % af SNP arveligheden for height, 21 % af arveligheden for BMI og 13 % af arveligheden for educational attainment. 
+Derimod kan vi kun forklare 1 % af arveligheden for ADHD og 0 % af arveligheden for henholdsvis persistent thinness, autisme og anoreksi. 
 Det giver os også en idé om, hvor meget mere vi kunne opdage ved at øge stikprøvestørrelsen.
 - **Bivariateplot**:
  ![Bivariateplot for AN vs ADHD](https://github.com/LaerkeE/Project/blob/main/figures/Bivariate_plots/PGC_AN_2019_qc_noMHC_vs_ADHD_2022_noMHC_Visualization.png)
