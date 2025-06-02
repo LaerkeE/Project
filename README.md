@@ -233,6 +233,7 @@ Hvis MiXeR-modellen har en positiv AICmin, passer den bedre end minimumsmodellen
    [Se resten af plotene her](figures/Bivariate_plots) 
 - **Robusthedplot**:
 ![Robushed log-likelihood plot](https://github.com/LaerkeE/Project/blob/main/figures/Robustheds_plots/loglikelihood_models.png)
+
 Dette plot viser log-likelihood-kurverne fra vores fem gentagelser af den bivariate MiXeR-analyse for anoreksi og ADHD. Kurverne er lagt oven i hinanden, så man kan vurdere, hvor stabile modellens resultater er på tværs af forskellige referenceudsnit.
 
 **Sådan vurderes robustheden:**  
