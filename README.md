@@ -25,8 +25,18 @@ Analysen udføres ved hjælp af MiXeR-softwaren på et High Performance Cluster 
 
 Modellen antager, at effekterne af genetiske varianter kan opdeles i to grupper:
 
-- Kausale varianter, hvis effektstørrelser følger en normalfordeling.
-- Ikke-kausale varianter, som antages at have nul effekt (Dirac-deltafunktion).
+- Kausale varianter, som har en reel effekt, hvor effektstørrelserne følger en normalfordeling.
+- Ikke-kausale varianter, som antages at have præcis nul effekt.
+
+Det kan udtrykkes matematisk som:
+
+$$\beta\sim\pi_1\cdot N(0,\sigma_\beta^2)+(1-\pi_1)\cdot N(0,0)$$
+
+hvor:
+
+- $\pi_1$ er sandsynligheden for, at en variant er kausal.
+- $\sigma_\beta^2$ er variansen af effektstørrelserne for de kausale varianter.
+- N(0,0) repræsenterer i praksis Dirac delta-funktionen, hvilket betyder, at ikke-kausale varianter har præcis nul effekt.
 
 Ved at anvende en bivariat mixture-model estimerer MiXeR:
 
