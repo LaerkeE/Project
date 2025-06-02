@@ -124,6 +124,7 @@ Koden er delt op i en fit-kode og en test-kode.
 #### Fit kode
 Denne kode kører MiXeR’s univariate fit-analyse på et sæt GWAS-summary statistics. Koden læser først GWAS-dataene fra den angivne fil og udvælger de SNPs, der skal indgå i analysen, baseret på en separat liste. I koden bruges der referencefiler, der indeholder information om SNP-positioner og deres indbyrdes genetiske sammenhæng (linkage disequilibrium).
 [Se mappen her](code/Reference)
+
 Ud fra dette estimerer MiXeR en statistisk model, der beskriver, hvor mange SNP's der har betydning for den mentale lidelse, og hvordan deres effekter er fordelt. Resultaterne gemmes i en outputfil, som kan bruges til videre analyser. 
 
 [Se scriptet her](https://github.com/LaerkeE/Project/blob/main/code/Univariate/univariate_an_fit.sh)
