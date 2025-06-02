@@ -96,15 +96,15 @@ Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer. Dis
 Alle anvendte data er hentet fra [GWAS Catalog](https://www.ebi.ac.uk/gwas/). Da datasættene indeholder mange tusinde rækker og fylder meget, er det ikke muligt at inkludere dem direkte i GitHub-repositoriet. Hvis man ønsker at se dataen, kan man downloade dataene fra ovenstående kilde.
 
 ### Hvad er GWAS-summary statistics
-I dette projekt anvendes GWAS-summary statistics som grunddata for vores analyser.
+I dette projekt anvendes GWAS-summary statistics som grunddata for vores univariate analyser.
 GWAS (Genome-Wide Association Studies) er store genetiske undersøgelser, hvor man undersøger sammenhængen mellem genetiske varianter (typisk SNPs) og en bestemt sygdom eller egenskab.
 Summary statistics er resultaterne fra disse undersøgelser, typisk i form af tabeller, hvor hver række svarer til én genetisk variant og indeholder information om fx:
 
-SNP-ID (navn på varianten)
-Hvilke alleler der er undersøgt (A1/A2)
-Effektstørrelse (hvor meget varianten påvirker sygdommen)
-Standardfejl og p-værdi (statistisk usikkerhed og signifikans)
-Antal cases og kontroller
+- SNP-ID (til at identificere varianten)
+- Hvilke alleler der er undersøgt (A1/A2)
+- Effektstørrelse (hvor meget varianten påvirker sygdommen)
+- Standardfejl og p-værdi (statistisk usikkerhed og signifikans)
+- Antal cases og kontroller
 
 Summary statistics bruges som input til MiXeR-analyserne, hvor de danner grundlag for at estimere, hvor mange genetiske varianter der bidrager til en sygdom, og hvor meget genetisk overlap der er mellem forskellige sygdomme eller træk.
 
