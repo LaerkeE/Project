@@ -55,7 +55,7 @@ Som en del af projektet har vi derfor skullet lære at navigere i systemet, heru
 ## Projektstruktur
 Projektet er organiseret i tre hovedmapper, så du nemt kan finde data, kode og resultater:
 - CSV filer:
-Indeholder alle CSV-filer, der er blevet produceret fra analyserne. Her ligger både rå og behandlede data samt output fra de forskellige analyser.
+Indeholder alle CSV-filer, der er blevet produceret fra analyserne. Her ligger behandlede data samt output fra de forskellige analyser.
 
 - code:
 Indeholder al kode, opdelt i undermapper efter analysetype:
