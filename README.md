@@ -19,9 +19,9 @@ Dette repository indeholder kode, visualiseringer og baggrundsmateriale til data
 
 ## Introduktion
 
-Projektet går ud på at undersøge sammenhængen mellem genetiske varianter (forskelle i DNA-sekvensen mellem individer) og mentale lidelser. Specifikt undersøges sammenhængen mellem anoreksi og andre træk. Målet er at estimere genetisk korrelation, andelen af delte varianter mellem disse træk og hvorvidt de overlappende genetiske varianter har en ensartet eller modsatvirkende effekt.
+Projektet går ud på at undersøge sammenhængen mellem genetiske varianter (forskelle i DNA-sekvensen mellem individer) og mentale lidelser. Specifikt undersøges sammenhængen mellem anoreksi og udvalgte neuropsykiatriske udviklingsforstyrelser. Målet er at estimere genetisk korrelation, andelen af delte varianter mellem disse træk og hvorvidt de overlappende genetiske varianter har en ensartet eller modsatvirkende effekt.
 
-Analysen udføres ved hjælp af MiXeR-softwaren på et High Performance Cluster (HPC). MiXeR er en statistisk metode, der estimerer polygenicitet og genetisk overlap mellem træk ud fra GWAS summary statistics og LD-struktur.
+Analysen udføres ved hjælp af MiXeR-softwaren på et High Performance Cluster (HPC). MiXeR er en statistisk metode, der estimerer polygenicitet og genetisk overlap mellem træk ud fra GWAS summary statistics.
 
 Modellen antager, at effekterne af genetiske varianter kan opdeles i to grupper:
 
@@ -34,12 +34,11 @@ Ved at anvende en bivariat mixture-model estimerer MiXeR:
 - Antal varianter, der er specifikke for hvert træk.
 - Antal varianter uden effekt på nogen af trækkene.
 
-Modelparametre estimeres ved at matche den observerede fordeling af z-scorer (grupperet efter LD og heterozygositet) til modellens forventede fordeling.
+Modelparametre estimeres ved at matche den observerede fordeling af z-scorer til modellens forventede fordeling.
 Dette gøres ved at maksimere en multinomial likelihood vha. numerisk optimering (Nelder-Mead).
 
-Metoden muliggør kvantificering af både genetisk overlap og træk-specifik polygenicitet samt robust estimering af effektstørrelser og residual inflation i GWAS-data.
 
-Analysen er udført via NoMachine, et fjernskrivebordsværktøj, der giver adgang til et HPC miljø. NoMachine er anvendt for at kunne håndtere og analysere de store datamængder, som arbejdet med genetiske data fra GWAS kræver.
+Analysen er udført via GenomeDK, et linux baseret HPC miljø. GenomeDK er anvendt for at kunne håndtere og analysere de store datamængder, som arbejdet med genetiske data fra GWAS kræver.
 
 Som en del af projektet har vi derfor skullet lære at navigere i systemet, herunder arbejde i terminalmiljø, håndtere filer og afvikle kode på et HPC. Analyserne kan desuden være tidskrævende - både på grund af lange beregningstider og fordi man ofte skal vente i kø, før ens job bliver kørt.
 
@@ -118,7 +117,7 @@ Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer
 
 Bemærk: Koden, som er vist her i projektet, kan ikke køres direkte, da filstierne og miljøet er tilpasset et High Performance Computing (HPC) cluster. 
 ### Univariat analyse
-Den univariate analyse bruges til at estimere, hvor mange SNP's der samlet set har indflydelse på risikoen for en mental lidelse, samt styrken af de genetiske bidrag. Dette gøres for én enkelt mental lidelse (eller et andet træk) ad gangen og er baseret på GWAS-summary statistics.
+Den univariate analyse bruges til at estimere, hvor mange SNP's der samlet set har indflydelse på risikoen for en mental lidelse. Dette gøres for én enkelt mental lidelse (eller et andet træk) ad gangen og er baseret på GWAS-summary statistics.
 
 Koden er delt op i en fit-kode og en test-kode.
 
