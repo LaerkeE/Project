@@ -83,7 +83,7 @@ Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer. Dis
 ## Data
 ### Oprindelse af data
 
-Alle anvendte data er hentet fra [GWAS Catalog](https://www.ebi.ac.uk/gwas/). Da datasættene indeholder mange tusinde rækker og fylder meget, er det ikke muligt at inkludere dem direkte i GitHub-repositoriet. Hvis du ønsker at genskabe analyserne, kan du downloade dataene fra ovenstående kilde.
+Alle anvendte data er hentet fra [GWAS Catalog](https://www.ebi.ac.uk/gwas/). Da datasættene indeholder mange tusinde rækker og fylder meget, er det ikke muligt at inkludere dem direkte i GitHub-repositoriet. Hvis man ønsker at se dataen, kan man downloade dataene fra ovenstående kilde.
 
 ### Hvad er GWAS-summary statistics
 I dette projekt anvendes GWAS-summary statistics som grunddata for vores univariate analyser.
