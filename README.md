@@ -96,7 +96,7 @@ Alle resultater fra analyserne bliver gemt som CSV-filer i mappen CSV filer. Dis
 Alle anvendte data er hentet fra [GWAS Catalog](https://www.ebi.ac.uk/gwas/). Da datasættene indeholder mange tusinde rækker og fylder meget, er det ikke muligt at inkludere dem direkte i GitHub-repositoriet. Hvis man ønsker at se dataen, kan man downloade dataene fra ovenstående kilde.
 
 ### Hvad er GWAS-summary statistics
-I dette projekt anvendes GWAS-summary statistics som grunddata for vores univariate analyser.
+I dette projekt anvendes GWAS-summary statistics som grunddata for vores analyser.
 GWAS (Genome-Wide Association Studies) er store genetiske undersøgelser, hvor man undersøger sammenhængen mellem genetiske varianter (typisk SNPs) og en bestemt sygdom eller egenskab.
 Summary statistics er resultaterne fra disse undersøgelser, typisk i form af tabeller, hvor hver række svarer til én genetisk variant og indeholder information om fx:
 
