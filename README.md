@@ -71,9 +71,7 @@ Når du læser README’en, vil du løbende finde links til de relevante mapper 
 Hvis under tidpress, for at få et overblik over projektets workflow og vigtigste resultater, anbefaler vi at læse afsnittene om:
 
 - Univariat analyse
-
 - Bivariat analyse
-
 - Visualiseringer
 
 Her finder du både forklaringer, eksempler og direkte links til kode og figurer.
