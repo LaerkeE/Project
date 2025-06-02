@@ -187,7 +187,7 @@ Derimod kan vi kun forklare 1 % af arveligheden for ADHD og 0 % af arveligheden 
 Det giver os også en idé om, hvor meget mere vi kunne opdage ved at øge stikprøvestørrelsen.
 - **Bivariateplot**:
  ![Bivariateplot for AN vs ADHD](https://github.com/LaerkeE/Project/blob/main/figures/Bivariate_plots/PGC_AN_2019_qc_noMHC_vs_ADHD_2022_noMHC_Visualization.png)
-På vores bivariate plot har vi 4 forskellige figure. Et venn diagram, to QQ plots og et log-likelighood plot
+På vores bivariate plot har vi 4 forskellige figurer. Et venn diagram, to QQ plots og et log-likelighood plot.
 
 #### Venn diagrammet
 Venn-diagrammet viser det gennemsnitlige antal kausale varianter (i tusinder), der er nødvendige for at forklare 90% af SNP-baseret arvelighed (h2SNP) for de to træk.
