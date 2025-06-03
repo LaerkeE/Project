@@ -36,7 +36,7 @@ hvor:
 
 - $\pi_1$ er sandsynligheden for, at en variant er kausal.
 - $\sigma_\beta^2$ er variansen af effektstørrelserne for de kausale varianter.
-- N(0,0) repræsenterer i praksis Dirac delta-funktionen.
+- N(0,0) i praksis repræsenterer Dirac delta-funktionen.
 
 Ved at anvende en bivariat mixture-model estimerer MiXeR:
 
