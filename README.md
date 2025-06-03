@@ -54,10 +54,10 @@ Som en del af projektet har vi derfor skullet lære at navigere i systemet, heru
 
 ## Projektstruktur
 Projektet er organiseret i tre hovedmapper, så du nemt kan finde data, kode og resultater:
-- CSV filer:
+- [CSV filer:](https://github.com/LaerkeE/Project/tree/main/CSV%20filer)
 Indeholder alle CSV-filer, der er blevet produceret fra analyserne. Her ligger behandlede data samt output fra de forskellige analyser.
 
-- code:
+- [code:](https://github.com/LaerkeE/Project/tree/main/code)
 Indeholder al kode, opdelt i undermapper efter analysetype:
 
   - Bivariate: Kode til bivariate analyser (genetisk overlap mellem to træk).
@@ -66,7 +66,7 @@ Indeholder al kode, opdelt i undermapper efter analysetype:
   - Reference: Kode og scripts af referencepaneler.
   - Visualiseringer: Kode til at generere plots og figurer.
 
-- figures:
+- [figures:](https://github.com/LaerkeE/Project/tree/main/figures)
 Indeholder alle genererede figurer og plots.
 Denne mappe har to undermapper:
 
